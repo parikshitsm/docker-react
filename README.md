@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project demonstrates the following flow: 
+  - Develope a React Application and push your code to github. 
+  - Travis CI will be triggered once the code is merged with master branch. 
+  - Travis CI will perform test operations on master branch. 
+  - Once the tests are successful, Travis CI will create a zip out of entire code & save it onto AWS S3 bucket. 
+  - Once S3 bucket has the code, AWS Elasticbeanstalk will deploy our application on EBS and we can verify it from EBS url. 
+  
+  All above steps have been configured in .travis.yml file.
+  This is a single container application where entire application is running on single container. 
+
 ## Available Scripts
 
 In the project directory, you can run:
